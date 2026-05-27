@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Портфолио</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #ffffff;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            color: #000000;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.6rem 1.4rem;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-btn:hover {
+            color: #4caf50;
+        }
+
+        .nav-btn.active {
+            color: #4caf50;
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 2rem;
+        }
+
+        .glow-name {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #4caf50;
+            display: inline-block;
+        }
+
+        .age-badge {
+            font-size: 1rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-left: 0.75rem;
+            vertical-align: middle;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 650;
+            color: #000000;
+        }
+
+        h3 {
+            font-size: 1.55rem;
+            font-weight: 600;
+            margin: 0.8rem 0;
+            color: #000000;
+        }
+
+        .list-fact {
+            list-style: none;
+            padding: 0;
+        }
+        .list-fact li {
+            margin-bottom: 0.85rem;
+            padding-left: 1.7rem;
+            position: relative;
+        }
+        .list-fact li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .projects-list {
+            list-style: none;
+            padding: 0;
+        }
+        .projects-list li {
+            margin-bottom: 0.85rem;
+        }
+        .projects-list li a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .projects-list li a:hover {
+            color: #4caf50;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .skill-item {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #000000;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 700px) {
+            section { padding: 1.2rem; }
+            .glow-name { font-size: 2.2rem; }
+            .nav-btn { padding: 0.4rem 1rem; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <button class="nav-btn active" data-section="about">Обо мне</button>
+    <button class="nav-btn" data-section="minecraft">Minecraft и факты</button>
+    <button class="nav-btn" data-section="projects">Мои проекты</button>
+</div>
+
+<!-- Секция 1: Обо мне -->
+<section id="about">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;">
+        <div>
+            <span class="glow-name">Андрей Юрьев</span>
+            <span class="age-badge">12 лет</span>
+        </div>
+    </div>
+    <p style="font-size: 1.3rem; margin: 1.2rem 0 0.8rem 0;"><strong>Привет! Меня зовут Андрей. Я недавно начал заниматься созданием сайтов. Это сложно, но интересно — когда пишешь код, а потом видишь, как всё работает. Хочу дальше учиться и делать ещё лучше!</strong></p>
+</section>
+
+<!-- Секция 2: Minecraft и основные факты -->
+<section id="minecraft">
+    <h2>Minecraft: больше чем игра — алгоритмический космос</h2>
+    <p style="margin-bottom: 1.8rem;"><strong>Minecraft</strong> — это бесконечная песочница, где каждый блок подчиняется логике. С точки зрения алгоритмики тут есть всё: процедурная генерация (шум Перлина), системы крафта (комбинаторика), искусственный интеллект мобов (конечные автоматы) и даже целые компьютеры на редстоуне. Ниже — несколько впечатляющих фактов!</p>
+
+    <h3>Топ-5 фактов о Minecraft</h3>
+    <ul class="list-fact">
+        <li><strong>300+ млн копий</strong> — Minecraft — самая продаваемая игра в истории, обогнавшая Тетрис и GTA V. Это абсолютный рекорд!</li>
+        <li><strong>Бесконечные миры</strong> — Технический предел мира — 30 млн блоков от центра (граница Far Lands). Обойти такой мир пешком невозможно за человеческую жизнь.</li>
+        <li><strong>Редстоун-компьютер</strong> — Игроки создали рабочие процессоры, калькуляторы и даже эмулятор игры "Тетрис" на красной пыли. Редстоун — настоящая электроника!</li>
+        <li><strong>Эндер-дракон</strong> — Первый и главный босс, добавленный в версии 1.0. Его уничтожение открывает путь к Эндер-городам и элитрам.</li>
+        <li><strong>Процедурная магия</strong> — Шум Перлина и детерминированные сиды создают уникальные биомы, руды и пещеры. Без алгоритмов не было бы ни одного кусочка мира!</li>
+    </ul>
+    
+    <img src="https://i.pinimg.com/originals/41/18/8d/41188d125dddf976cb768e94037ebcf5.jpg" alt="Minecraft" style="width: 100%; max-width: 800px; margin-top: 2rem;"/>
+</section>
+
+<!-- Секция 3: Мои проекты -->
+<section id="projects">
+    <h2>Мои веб-проекты</h2>
+    <p style="font-size: 1.1rem; margin: 1rem 0;">Вот что я создал сам! Переходите, смотрите мои работы.</p>
+    <ul class="projects-list">
+        <li><a href="https://phenomenal-starlight-8bc15a.netlify.app/" target="_blank" rel="noopener noreferrer">Горные экскурсии, применение анимации</a></li>
+        <li><a href="https://jade-twilight-401b03.netlify.app/" target="_blank" rel="noopener noreferrer">Применение дизайна</a></li>
+    </ul>
+
+    <h3 style="margin-top: 2rem;">Инструменты, которые я освоил</h3>
+    <div class="skills-grid">
+        <div class="skill-item">Tilda</div>
+        <div class="skill-item">HTML/CSS</div>
+        <div class="skill-item">Netlify</div>
+    </div>
+</section>
+
+<script>
+    const sections = {
+        about: document.getElementById('about'),
+        minecraft: document.getElementById('minecraft'),
+        projects: document.getElementById('projects')
+    };
+
+    const navButtons = document.querySelectorAll('.nav-btn');
+
+    function scrollToSection(sectionId) {
+        if (sections[sectionId]) {
+            sections[sectionId].scrollIntoView({ behavior: 'smooth' });
+        }
+        navButtons.forEach(btn => {
+            const btnSection = btn.getAttribute('data-section');
+            if (btnSection === sectionId) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    }
+
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const section = btn.getAttribute('data-section');
+            scrollToSection(section);
+        });
+    });
+
+    function handleHash() {
+        const hash = window.location.hash.slice(1);
+        if (hash === 'about' || hash === 'minecraft' || hash === 'projects') {
+            scrollToSection(hash);
+        }
+    }
+    window.addEventListener('hashchange', handleHash);
+    if (window.location.hash) handleHash();
+</script>
+</body>
+</html>
